@@ -40,15 +40,19 @@ Configure** if you only want advertisements.
 
 ### Marketplace (Home Assistant 2026.11 and later)
 
-**Settings → Marketplace → Add from link**, enter `benyaming/ha-combustion`, install, then
-restart Home Assistant. Custom repositories need the Marketplace connected to GitHub; it asks
-you to connect the first time if it is not.
+[![Open your Home Assistant instance and open this repository in the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=benyaming&repository=ha-combustion&category=integration)
+
+Or by hand: **Settings → Marketplace → Add from link**, enter `benyaming/ha-combustion`. Install,
+then restart Home Assistant. Custom repositories need the Marketplace connected to GitHub; it
+asks you to connect the first time if it is not.
 
 ### HACS (Home Assistant 2026.10)
 
-**HACS → ⋮ → Custom repositories**, add `https://github.com/benyaming/ha-combustion` as an
-*Integration*, install **Combustion Inc**, then restart. On upgrading to 2026.11 the Marketplace
-takes this over automatically.
+[![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=benyaming&repository=ha-combustion&category=integration)
+
+Or by hand: **HACS → ⋮ → Custom repositories**, add `https://github.com/benyaming/ha-combustion`
+as an *Integration*. Install **Combustion Inc**, then restart. On upgrading to 2026.11 the
+Marketplace takes this over automatically.
 
 ### Manual
 
@@ -59,7 +63,9 @@ and restart.
 
 Combustion devices in range are discovered automatically: accept the discovery under
 **Settings → Devices & services**. One entry covers all of them; new devices are added as they
-appear.
+appear. To add it before any device is in range:
+
+[![Open your Home Assistant instance and start setting up Combustion Inc.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=combustion_inc)
 
 If you used `legrego/homeassistant-combustion` or a fork of it, remove it first. This
 integration uses its own domain (`combustion_inc`), so the two do not clash, but there is no
