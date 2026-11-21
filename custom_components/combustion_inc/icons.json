@@ -1,0 +1,48 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "alarm": { "default": "mdi:alarm-bell" },
+      "high_alarm": { "default": "mdi:thermometer-chevron-up" },
+      "low_alarm": { "default": "mdi:thermometer-chevron-down" },
+      "app_mode": { "default": "mdi:cellphone-link" },
+      "fixed_speed": { "default": "mdi:fan-lock" }
+    },
+    "button": {
+      "silence_alarms": { "default": "mdi:bell-off" }
+    },
+    "number": {
+      "removal_temperature": { "default": "mdi:thermometer-check" },
+      "high_alarm_temperature": { "default": "mdi:thermometer-chevron-up" },
+      "low_alarm_temperature": { "default": "mdi:thermometer-chevron-down" },
+      "set_point": { "default": "mdi:thermostat" }
+    },
+    "select": {
+      "prediction_mode": { "default": "mdi:timer-cog-outline" }
+    },
+    "sensor": {
+      "core_temperature": { "default": "mdi:thermometer-probe" },
+      "instant_read": { "default": "mdi:thermometer-lines" },
+      "mode": { "default": "mdi:thermometer-auto" },
+      "probe_id": { "default": "mdi:numeric" },
+      "color": { "default": "mdi:palette" },
+      "hop_count": { "default": "mdi:access-point-network" },
+      "prediction_state": { "default": "mdi:chart-timeline-variant" },
+      "prediction_type": { "default": "mdi:timer-outline" },
+      "prediction_remaining": { "default": "mdi:timer-sand" },
+      "prediction_progress": { "default": "mdi:progress-clock" },
+      "food_safe_state": { "default": "mdi:shield-check-outline" },
+      "food_safe_log_reduction": { "default": "mdi:bacteria-outline" },
+      "gauge_id": { "default": "mdi:numeric" },
+      "set_point": { "default": "mdi:thermostat" },
+      "fan_state": { "default": "mdi:fan" },
+      "fan_duty_cycle": { "default": "mdi:fan-chevron-up" },
+      "fan_speed": { "default": "mdi:fan" },
+      "controller_state": { "default": "mdi:state-machine" },
+      "charging_state": { "default": "mdi:battery-charging" }
+    },
+    "switch": {
+      "high_alarm": { "default": "mdi:thermometer-chevron-up" },
+      "low_alarm": { "default": "mdi:thermometer-chevron-down" }
+    }
+  }
+}

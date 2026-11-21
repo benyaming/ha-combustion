@@ -1,0 +1,185 @@
+{
+  "config": {
+    "step": {
+      "confirm": {
+        "description": "Set up Combustion Inc? Every Combustion probe, Giant Grill Gauge, Display, Booster and Engine in Bluetooth range is added automatically, including probes heard only through MeatNet."
+      }
+    },
+    "abort": {
+      "already_configured": "Combustion Inc is already set up.",
+      "not_supported": "This Bluetooth advertisement is not from a supported Combustion device."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "active_connection": "Connect for predictions and control"
+        },
+        "data_description": {
+          "active_connection": "Hold one Bluetooth connection to a MeatNet device (or to probes, when no other Combustion device is in range). This adds predictions, food safety, alarm state and controls. Temperatures are read from advertisements either way. Needs a local adapter or an ESPHome Bluetooth proxy; a passive proxy cannot connect."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "overheating": { "name": "Overheating" },
+      "alarm": { "name": "Alarm" },
+      "sensor_present": { "name": "Sensor connected" },
+      "high_alarm": { "name": "High alarm" },
+      "low_alarm": { "name": "Low alarm" },
+      "app_mode": { "name": "App mode" },
+      "control_device_connected": { "name": "Control device" },
+      "lid_open": { "name": "Lid" },
+      "fixed_speed": { "name": "Fixed fan speed" },
+      "connected": { "name": "Connected" }
+    },
+    "button": {
+      "silence_alarms": { "name": "Silence alarms" }
+    },
+    "number": {
+      "removal_temperature": { "name": "Removal temperature" },
+      "high_alarm_temperature": { "name": "High alarm temperature" },
+      "low_alarm_temperature": { "name": "Low alarm temperature" },
+      "set_point": { "name": "Set point" }
+    },
+    "select": {
+      "prediction_mode": {
+        "name": "Prediction mode",
+        "state": {
+          "none": "Off",
+          "time_to_removal": "Time to removal",
+          "removal_and_resting": "Removal and resting"
+        }
+      }
+    },
+    "sensor": {
+      "core_temperature": { "name": "Core temperature" },
+      "surface_temperature": { "name": "Surface temperature" },
+      "ambient_temperature": { "name": "Ambient temperature" },
+      "thermistor": { "name": "T{number} temperature" },
+      "instant_read": { "name": "Instant read" },
+      "mode": {
+        "name": "Mode",
+        "state": {
+          "normal": "Normal",
+          "instant_read": "Instant read",
+          "reserved": "Reserved",
+          "error": "Error"
+        }
+      },
+      "probe_id": { "name": "Probe ID" },
+      "color": {
+        "name": "Color",
+        "state": {
+          "yellow": "Yellow",
+          "grey": "Grey",
+          "color_3": "Color 3",
+          "color_4": "Color 4",
+          "color_5": "Color 5",
+          "color_6": "Color 6",
+          "color_7": "Color 7",
+          "color_8": "Color 8"
+        }
+      },
+      "hop_count": { "name": "MeatNet hops" },
+      "prediction_state": {
+        "name": "Prediction",
+        "state": {
+          "probe_not_inserted": "Not inserted",
+          "probe_inserted": "Inserted",
+          "warming": "Warming",
+          "predicting": "Predicting",
+          "removal_prediction_done": "Ready to remove",
+          "unknown": "Unknown"
+        }
+      },
+      "prediction_type": {
+        "name": "Prediction type",
+        "state": {
+          "none": "None",
+          "removal": "Removal",
+          "resting": "Resting",
+          "reserved": "Reserved"
+        }
+      },
+      "prediction_remaining": { "name": "Time remaining" },
+      "prediction_progress": { "name": "Progress to removal" },
+      "estimated_core_temperature": { "name": "Estimated core temperature" },
+      "heat_start_temperature": { "name": "Heat start temperature" },
+      "food_safe_state": {
+        "name": "Food safety",
+        "state": {
+          "not_safe": "Not safe yet",
+          "safe": "Safe",
+          "safety_impossible": "Safety impossible"
+        }
+      },
+      "food_safe_log_reduction": { "name": "Log reduction" },
+      "high_alarm_temperature": { "name": "High alarm temperature" },
+      "low_alarm_temperature": { "name": "Low alarm temperature" },
+      "gauge_id": { "name": "Gauge ID" },
+      "set_point": { "name": "Set point" },
+      "control_temperature": { "name": "Control temperature" },
+      "fan_state": {
+        "name": "Fan",
+        "state": {
+          "power_down": "Powered down",
+          "paused": "Paused",
+          "lid_open": "Lid open",
+          "fan_off": "Off",
+          "fan_on": "On"
+        }
+      },
+      "fan_duty_cycle": { "name": "Fan duty cycle" },
+      "fan_speed": { "name": "Fan speed" },
+      "controller_state": {
+        "name": "Controller",
+        "state": {
+          "idle": "Idle",
+          "startup": "Starting up",
+          "probe": "Probing",
+          "observe": "Observing",
+          "rest": "Resting"
+        }
+      },
+      "battery_voltage": { "name": "Battery voltage" },
+      "charging_state": {
+        "name": "Charging",
+        "state": {
+          "not_charging": "Not charging",
+          "charging": "Charging",
+          "fully_charged": "Fully charged"
+        }
+      }
+    },
+    "switch": {
+      "high_alarm": { "name": "High alarm" },
+      "low_alarm": { "name": "Low alarm" }
+    }
+  },
+  "exceptions": {
+    "active_connection_disabled": {
+      "message": "Turn on \"Connect for predictions and control\" in the Combustion Inc options to use this."
+    },
+    "not_connected": {
+      "message": "No Bluetooth connection to a Combustion device right now. A local adapter or an ESPHome Bluetooth proxy in range is needed."
+    },
+    "command_rejected": {
+      "message": "The Combustion device rejected the command."
+    },
+    "command_timeout": {
+      "message": "The Combustion device did not answer the command."
+    },
+    "removal_temperature_required": {
+      "message": "Set a removal temperature first."
+    },
+    "alarm_temperature_required": {
+      "message": "Set the alarm temperature first."
+    },
+    "engine_not_in_app_mode": {
+      "message": "The Engine accepts a set point from Home Assistant only while it is in app mode."
+    }
+  }
+}
